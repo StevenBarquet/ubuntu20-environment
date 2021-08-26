@@ -1,0 +1,27 @@
+---
+# ansible-playbook /home/botz/Documents/ubuntu20-environment/terminal-programs/docker/config.yml
+- name: docker config
+  hosts: local
+  tasks:
+    - name: usermod -aG
+      shell:
+        cmd: sudo usermod -aG docker ${USER}
+    
+    - name: su
+      shell:
+        cmd: su - ${USER}
+    
+    - name: id
+      shell:
+        cmd: id -nG
+
+    - name: usermod
+      shell:
+        cmd: sudo usermod -aG docker botz
+  
+    - name: docker ls
+      shell:
+        cmd: docker container ls
+    
+    
+...

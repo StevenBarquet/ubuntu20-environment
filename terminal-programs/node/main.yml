@@ -1,0 +1,30 @@
+---
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/terminal-programs/node/main.yml
+- name: NODE
+  hosts: local
+  tasks:
+    - name: apt update
+      shell:
+        cmd: sudo apt update
+    
+    - name: downloading realeses
+      shell:
+        cmd: sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+    
+    - name: downloading node 12 repo
+      shell:
+        cmd: curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+    
+    - name: install node 12
+      shell:
+        cmd: sudo apt -y install nodejs
+    
+    - name: install gcc
+      shell:
+        cmd: sudo apt -y  install gcc g++ make
+
+    - name: upate npm to 7
+      shell:
+        cmd: sudo npm install --global npm@7
+
+...

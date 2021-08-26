@@ -1,0 +1,10 @@
+---
+# ansible-playbook /home/botz/Documents/ubuntu20-environment/terminal-programs/flameshot/main.yml
+- name: Flameshot
+  hosts: local
+  tasks:
+    - name: Install Flameshot
+      shell:
+        cmd: sudo apt install flameshot
+    
+...

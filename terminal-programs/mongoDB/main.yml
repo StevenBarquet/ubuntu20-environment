@@ -1,0 +1,26 @@
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/terminal-programs/mongoDB/main.yml
+- name: mongoDB
+  hosts: local
+  tasks:
+    - name: add key
+      shell:
+        cmd: curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+    
+    - name: show repos
+      shell:
+        cmd: apt-key list
+    
+    - name: echo mongo 4.4
+      shell:
+        cmd: echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+    
+    - name: apt update
+      shell:
+        cmd: sudo apt update
+    
+    - name: install mongodb
+      shell:
+        cmd: sudo apt install mongodb-org -y
+    
+
+...

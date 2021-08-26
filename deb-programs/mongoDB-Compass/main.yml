@@ -1,0 +1,9 @@
+---
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/deb-programs/mongoDB-Compass/main.yml
+- name: mongoDB Compass
+  hosts: local
+  tasks:
+    - name: Install mongoDB Compass
+      shell:
+        cmd: sudo dpkg -i /home/botz/Documents/installers/compass.deb
+...

@@ -1,0 +1,37 @@
+---
+# ansible-playbook /home/botz/Documents/ubuntu20-environment/terminal-programs/template/main.yml
+- name: DOCKER
+  hosts: local
+  tasks:
+    - name: apt update
+      shell:
+        cmd: sudo apt update
+    
+    - name: get certs
+      shell:
+        cmd: sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+    
+    - name: get repos
+      shell:
+        cmd: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    
+    - name: echo repo docker
+      shell:
+        cmd: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+    
+    - name: update repos
+      shell:
+        cmd: sudo apt update
+    
+    - name: show docker repos
+      shell:
+        cmd: apt-cache policy docker-ce
+        
+    - name: install docker
+      shell:
+        cmd: sudo apt install docker-ce -y
+    
+    - name: start docker service
+      shell:
+        cmd: sudo systemctl status docker
+...

@@ -1,5 +1,5 @@
 ---
-# /home/botz/Documents/ubuntu20-environment/General/fix-packages/main.yml
+# ansible-playbook /home/botz/Documents/ubuntu20-environment/others/fix-packages/main.yml
 - name: FIX PACKAGES
   hosts: local
   tasks:

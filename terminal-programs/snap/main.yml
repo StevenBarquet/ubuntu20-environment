@@ -1,0 +1,17 @@
+---
+# ansible-playbook /home/botz/Documents/ubuntu20-environment/terminal-programs/snap/main.yml
+- name: SNAP
+  hosts: local
+  tasks:
+    - name: remove filter
+      shell:
+        cmd: sudo rm /etc/apt/preferences.d/nosnap.pref
+    
+    - name: Add repo
+      shell:
+        cmd: sudo apt update -y
+
+    - name: Install snapd
+      shell:
+        cmd: sudo apt install snapd -y
+...

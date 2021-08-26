@@ -1,0 +1,9 @@
+---
+# ansible-playbook /home/botz/Documents/ubuntu20-environment/terminal-programs/postman/main.yml
+- name: POSTMAN
+  hosts: local
+  tasks:
+    - name: Install POSTMAN
+      shell:
+        cmd: sudo snap install postman
+...

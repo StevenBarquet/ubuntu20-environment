@@ -1,0 +1,9 @@
+---
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/others/restore-mongo-db/main.yml
+- name: restore mongo DB
+  hosts: local
+  tasks:
+    - name: mongorestore
+      shell:
+        cmd: mongorestore  /home/botz/Documents/mongoData/
+...

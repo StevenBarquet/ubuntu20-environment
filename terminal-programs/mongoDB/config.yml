@@ -1,0 +1,20 @@
+---
+# ansible-playbook /home/botz/Documents/ubuntu20-environment/terminal-programs/mongoDB/config.yml
+- name: mongoDB config
+  hosts: local
+  tasks:
+    - name: start mongo
+      shell:
+        cmd: sudo systemctl start mongod.service
+    
+    - name: status
+      shell:
+        cmd: sudo systemctl status mongod
+    
+    - name: restart service enabled
+      shell:
+        cmd: sudo systemctl enable mongod
+    
+# test command: mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+    
+...
