@@ -1,0 +1,10 @@
+---
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/deb-programs/discord/main.yml
+- name: DISCORD
+  hosts: local
+  tasks:
+    - name: Install DISCORD
+      shell:
+        cmd: sudo apt install /home/botz/Documents/installers/discord.deb
+        
+...

@@ -1,0 +1,22 @@
+---
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/others/firefox-dev/main.yml
+# https://stevedevops-forge.github.io/firefox-dev-tutorial/
+- name: Firefox Dev
+  hosts: local
+  tasks:
+    - name: move tar
+      shell:
+        cmd: mv /home/botz/Downloads/firefox-dev.tar.bz2 /opt
+
+    - name: extract
+      shell:
+        cmd: cd /opt; sudo tar xjf firefox-dev.tar.bz2
+
+    - name: delete tar
+      shell:
+        cmd: sudo rm -rf /opt/firefox-dev.tar.bz2
+      
+    - name: change permissons
+      shell:
+        cmd: sudo chown -R $USER /opt/firefox
+...

@@ -1,0 +1,10 @@
+---
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/deb-programs/zoom/main.yml
+- name: ZOOM
+  hosts: local
+  tasks:
+    - name: Install ZOOM
+      shell:
+        cmd: sudo apt install /home/botz/Documents/installers/zoom_amd64.deb -y
+        
+...

@@ -1,0 +1,17 @@
+---
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/terminal-programs/obs/main.yml
+- name: OBS
+  hosts: local
+  tasks:
+    - name: Install ffmpeg
+      shell:
+        cmd: sudo apt install ffmpeg -y
+    
+    - name: Add repo
+      shell:
+        cmd: sudo add-apt-repository ppa:obsproject/obs-studio -y
+
+    - name: Install obs
+      shell:
+        cmd: sudo apt install obs-studio -y
+...

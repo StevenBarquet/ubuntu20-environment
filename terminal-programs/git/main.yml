@@ -1,5 +1,5 @@
 ---
-# ansible-playbook  /home/botz/Documents/ubuntu20-environment/General/git-install/main.yml
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/terminal-programs/git/main.yml
 - name: VSCODE
   hosts: local
   tasks:

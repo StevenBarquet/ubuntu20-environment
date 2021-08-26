@@ -1,0 +1,10 @@
+---
+# /home/botz/Documents/ubuntu20-environment/General/fix-packages/main.yml
+- name: FIX PACKAGES
+  hosts: local
+  tasks:
+    - name: apt --fix-broken
+      shell:
+        cmd: sudo apt --fix-broken install -y
+        
+...

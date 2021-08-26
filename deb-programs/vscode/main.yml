@@ -1,9 +1,9 @@
 ---
-# ansible-playbook  /home/botz/Documents/ubuntu20-environment/Programs/vscode/main.yml
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/deb-programs/vscode/main.yml
 - name: VSCODE
   hosts: local
   tasks:
-    - name: Install vsCode
+    - name: Install VSCODE
       shell:
         cmd: sudo dpkg -i /home/botz/Documents/installers/vscode.deb
 ...

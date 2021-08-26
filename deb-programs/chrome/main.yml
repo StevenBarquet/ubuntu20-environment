@@ -1,0 +1,9 @@
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/deb-programs/zoom/main.yml
+- name: CHROME
+  hosts: local
+  tasks:
+    - name: Install CHROME
+      shell:
+        cmd: sudo apt install /home/botz/Documents/installers/chrome.deb -y
+        
+...
