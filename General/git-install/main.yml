@@ -1,0 +1,9 @@
+---
+# ansible-playbook  /home/botz/Documents/ubuntu20-environment/General/git-install/main.yml
+- name: VSCODE
+  hosts: local
+  tasks:
+    - name: Instal git
+      shell:
+        cmd: sudo apt install git -y
+...
